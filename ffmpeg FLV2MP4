@@ -1,5 +1,4 @@
 @echo off
 for %%a in (*.flv) do (
-echo %%a 
-echo %%~na
+ffmpeg -i %%a -c:v copy -c:a aac %%~na.mp4
 )
